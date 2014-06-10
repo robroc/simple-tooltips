@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></head>
+<head><title>Title</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<style>
+
+  .ui-tooltip {
+    padding: 10px 20px;
+    font: 13px "Helvetica Neue", Sans-Serif;
+    box-shadow: 0 0 7px black;
+  }
+  
+  h4 { 
+    margin-bottom: 5px;
+    font-size: 15px     
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Add image and image map here. -->
+
+
+
+
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+        jQuery("#Map area").tooltip(
+           {
+            content: function(){
+                var element = jQuery( this );
+                return element.attr('alt')
+                },
+            track: true ,show: { 
+                effect:"fade", 
+                delay: 5 
+                }
+            });
+        jQuery("#Map area").click( function(e) {
+            e.preventDefault();
+        });            
+    });
+</script>
+
+
+</body>
+
+</html>
